@@ -1,0 +1,31 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/catppuccin_mocha.toml"
+]
+
+[env]
+  TERM = "xterm-256color" 
+
+[window]
+padding = { x = 5, y = 5 }
+dynamic_padding = true
+opacity = 0.85
+blur = true
+title = "kyle@archlinux"
+decorations_theme_variant = "Dark"
+decorations = "None"
+
+[font]
+normal = { family = "Hack", style = "regular" }
+bold = { family = "Hack", style = "Bold" }
+italic = { family = "Hack", style = "Italic" }
+bold_italic = { family = "Hack", style = "Bold Italic" }
+size = 12.5
+
+[selection]
+save_to_clipboard = true
+
+[terminal]
+  [terminal.shell]
+    program = "/bin/zsh"
+    args = ["-l"]
