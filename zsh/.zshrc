@@ -32,6 +32,17 @@ zinit light-mode for \
     zsh-users/zsh-autosuggestions \
     zsh-users/zsh-completions \
 
+export HISTFILE=$HOME/.zsh_history
+export HISTSIZE=5000
+export SAVEHIST=5000
+
+setopt APPEND_HISTORY         # Append new history lines to the history file.
+setopt INC_APPEND_HISTORY     # Add commands to the history file immediately.
+setopt EXTENDED_HISTORY       # Save timestamps and durations of commands.
+setopt HIST_IGNORE_DUPS       # Avoid duplicate commands in history.
+setopt HIST_IGNORE_SPACE      # Ignore commands that start with a space.
+setopt HIST_VERIFY            # Don't execute immediately upon history expansion.
+
 eval "$(oh-my-posh init zsh --config https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/catppuccin_mocha.omp.json)"
 
 # zinit update --all
