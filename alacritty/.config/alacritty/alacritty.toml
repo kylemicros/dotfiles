@@ -1,31 +1,30 @@
 [general]
-import = [
-    "~/.config/alacritty/themes/themes/catppuccin_mocha.toml"
-]
+import = ["~/.config/alacritty/themes/themes/catppuccin_macchiato.toml"]
 
 [env]
-  TERM = "xterm-256color" 
+TERM = "xterm-256color"
 
 [window]
-padding = { x = 5, y = 5 }
+padding = { x = 8, y = 8 }
 dynamic_padding = true
-opacity = 0.85
+opacity = 0.7
 blur = true
 title = "kyle@archlinux"
 decorations_theme_variant = "Dark"
 decorations = "None"
+startup_mode = "Maximized"
 
 [font]
-normal = { family = "Hack", style = "regular" }
-bold = { family = "Hack", style = "Bold" }
-italic = { family = "Hack", style = "Italic" }
-bold_italic = { family = "Hack", style = "Bold Italic" }
-size = 12.5
+normal = { family = "JetBrainsMono Nerd Font", style = "regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
+size = 14
 
 [selection]
 save_to_clipboard = true
 
 [terminal]
-  [terminal.shell]
-    program = "/bin/zsh"
-    args = ["-l"]
+[terminal.shell]
+program = "/bin/zsh"
+args = ["-l", "-c", "tmux attach || tmux"]
